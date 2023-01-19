@@ -1,0 +1,33 @@
+name: Deploy Website
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update local repository
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
+          script: |
+            cd ../home/portalbox.link/backend
+            git pull
+      - name: Build Svelte site
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
+          script: |
+            cd ../home/portalbox.link/backend
+            npm run build
+            cd build
+            sed -i 's/0.0.0.0/51.89.216.193/' index.js
+            sed -i 's/3000/2003/' index.js
+            pm2 restart 3
