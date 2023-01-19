@@ -3,7 +3,6 @@
 
   import '../app.css';
   import Main from '../components/page/Main.svelte';
-  import Footer from '../components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -30,5 +29,4 @@
     <Header />
     <Main />
   </div>
-  <Footer />
 </div>
