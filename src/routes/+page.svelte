@@ -1,5 +1,8 @@
 <script>
   import Header from '../components/page/Header.svelte';
+  import Section from '../components/Section.svelte';
+  import Products from '../components/page/Products.svelte';
+  import CommunityCards from '../components/page/CommunityCards.svelte';
 
   import '../app.css';
   import Main from '../components/page/Main.svelte';
@@ -24,9 +27,15 @@
 >
   <div
     id="app"
-    class="flex flex-col items-center min-h-full max-w-[1024px] p-10"
+    class="flex flex-col items-center justify-evenly gap-24 min-h-[100vh] max-w-[1280px] p-14 xs:p-7"
   >
     <Header />
-    <Main />
+    <!-- <Main /> -->
+    <Section>
+      <Products />
+    </Section>
+    <Section padding="0">
+      <CommunityCards />
+    </Section>
   </div>
 </div>
