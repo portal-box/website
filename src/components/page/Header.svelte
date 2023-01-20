@@ -4,7 +4,7 @@
 </script>
 
 <Section>
-  <div class="flex flex-col items-center gap-4 max-w-md">
+  <div class="flex flex-col items-center gap-4 max-w-sm">
     <img class="" src="logo.png" alt="Logo" />
     <h1 class="text-xl text-center">
       Providing a range of powerful tools to assist Minecraft plugin developers.

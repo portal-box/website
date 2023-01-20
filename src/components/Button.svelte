@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   export let disabled: boolean = false,
-    href: string,
+    href: string | null,
     buttonType: keyof typeof buttonHexColors;
 
   const buttonHexColors = {
@@ -14,11 +14,16 @@
   const textColor = buttonHexColors[buttonType].text;
 </script>
 
-<a {href} target="_blank" rel="noreferrer" class="w-full"
-  ><button
-    class="flex items-center justify-center rounded-full py-2 px-10 text-[16px] {$$props.class ??
-      ''} {disabled ? 'opacity-50 cursor-no-drop' : ''}}"
-    {disabled}
-    style="background-color:{bgColor};color:{textColor};"><slot /></button
-  ></a
+<a
+  {href}
+  target="_blank"
+  rel="noreferrer"
+  style="background-color:{bgColor};color:{textColor};{disabled
+    ? 'pointer-events:none;'
+    : ''}"
+  class="w-fit flex items-center justify-center rounded-full px-5 py-3 {disabled
+    ? 'opacity-50 cursor-no-drop'
+    : ''} {$$props.class ?? ''}"
 >
+  <slot />
+</a>

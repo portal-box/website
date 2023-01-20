@@ -1,5 +1,9 @@
 <script>
   import '../app.css';
+  export let padding = '64px';
+  // style="padding-bottom:{padding};"
 </script>
 
-<div class="pb-10 w-full flex flex-col items-center"><slot /></div>
+<div class="w-full flex flex-col items-center {$$props.class}">
+  <slot />
+</div>

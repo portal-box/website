@@ -9,6 +9,6 @@
 <Section>
   <Products />
 </Section>
-<Section>
+<Section padding="0">
   <CommunityCards />
 </Section>
