@@ -16,12 +16,11 @@
 
 <a
   {href}
-  target="_blank"
   rel="noreferrer"
   style="background-color:{bgColor};color:{textColor};{disabled
     ? 'pointer-events:none;'
     : ''}"
-  class="w-fit flex items-center justify-center rounded-full px-5 py-3 {disabled
+  class="w-fit flex items-center justify-center rounded-full px-5 py-3 transition-all hover:opacity-75 {disabled
     ? 'opacity-50 cursor-no-drop'
     : ''} {$$props.class ?? ''}"
 >

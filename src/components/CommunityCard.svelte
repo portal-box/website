@@ -1,6 +1,5 @@
 <script lang="ts">
   import '../app.css';
-  import Button from './Button.svelte';
 
   export let titleColor: string, title: string;
 </script>

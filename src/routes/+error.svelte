@@ -1,8 +1,5 @@
 <script>
   import Header from '../components/page/Header.svelte';
-  import Section from '../components/Section.svelte';
-  import Products from '../components/page/Products.svelte';
-  import CommunityCards from '../components/page/CommunityCards.svelte';
 
   import '../app.css';
 </script>
@@ -22,19 +19,12 @@
 
 <div
   id="body"
-  class="flex flex-col items-center justify-between bg-background min-h-[100vh] w-full text-white"
+  class="flex flex-col items-center bg-background min-h-[100vh] w-full text-white"
 >
   <div
     id="app"
-    class="flex flex-col items-center justify-evenly gap-24 min-h-[100vh] max-w-[1280px] p-14 xs:p-7"
+    class="flex flex-col items-center justify-center gap-24 min-h-[100vh] max-w-[1280px] p-14 xs:p-7"
   >
-    <Header text="Providing a range of powerful tools to assist Minecraft plugin developers." />
-    <!-- <Main /> -->
-    <Section>
-      <Products />
-    </Section>
-    <Section padding="0">
-      <CommunityCards />
-    </Section>
+    <Header text="Oops! This page doesn't exist." redirect />
   </div>
 </div>
