@@ -2,7 +2,6 @@
   import Button from '../Button.svelte';
   import '../../app.css';
   import ProductCard from '../ProductCard.svelte';
-  // xs:flex-col
 </script>
 
 <div

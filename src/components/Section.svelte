@@ -1,7 +1,6 @@
 <script>
   import '../app.css';
-  export let padding = '64px';
-  // style="padding-bottom:{padding};"
+  export const padding = '64px';
 </script>
 
 <div class="w-full flex flex-col items-center {$$props.class}">
